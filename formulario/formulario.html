@@ -1,0 +1,62 @@
+<html>
+
+<head>
+
+<script type="application/javascript">
+
+	function hola(even){
+		alert("hola");
+		
+		alert("Boton presionado" + even.value);
+	
+	}
+
+</script>
+
+</head>
+
+<body>
+
+<form id="formulario">
+	
+	<br>
+	<br>
+	<br>
+	<table width="100%" style="text-align:center;align:center" >
+		<tr>
+			<td>
+				<label for="input1">input1:</label>
+				<input type="text" id="input1" name="input1">
+				<br>
+				<br>				
+			<td>
+		</tr>		
+		<tr>
+			<td>
+				<label for="input2">input2:</label>
+				<input type="text" id="input2" name="input2">
+				<br>
+				<br>	
+			<td>
+		</tr>
+		<tr>
+			<td>
+				<label for="input3">input3:</label>
+				<input type="text" id="input3" name="input3">
+				<br>
+				<br>	
+			<td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="boton1" name="Registrar" value="Registrar" onclick="hola(this)"> 
+			<td>
+		</tr>	
+	</table>
+	
+</form>
+
+</body>
+
+</html>
+
