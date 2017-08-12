@@ -1,66 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<h1 class="first-color-font">Ver y Ocultar propiedas display</h1>
-<p id="intro">
-    Uno de los usos más comunes de la propiedad de presentación es
-    mostrar y ocultar el contenido con JavaScript.
-</p>
-<p class="second-color-font" id="details">
-    Es importante ocultar el contenido sólo cuando está activado Javascript en su navegador.
-</p>
-<p class="third-color-font">
-    La página se adapta cuando la propiedad visible de un elemento se establece en <code>none</code> o <code>block</code>
-    para el ejemplo...
-</p>
-<script>
-    (function() {
-        var intro = document.getElementById('intro'),
-            detail = document.getElementById('details'),
-            a = document.createElement('a'),
-            toggle;
+/* Variables t elementos Booleanos */
 
-        detail.className = 'show';
+var verdadero = true;
+var falso = false;
 
-        a.id = 'toggle';
-        a.href = '#';
+/* Elementos de Comparación */
 
-        a.appendChild(document.createTextNode('Ocultar Detalle'));
+/* igualdad (==) */
 
-        intro.appendChild(a);
+console.log('Cuando es 1 == 1 es: ' + (1 == 1));
 
-        function showHide(e) {
-            e = event || window.event;
+console.log('Cuando es "1" == 1 es: ' + ("1" == 1));
 
-            if (detail.className === 'show') {
-                detail.className = 'hide';
-                toggle.innerHTML = 'Ver detalles';
-            } else {
-                detail.className = 'show';
-                toggle.innerHTML = 'Ocultar Detalle';
-            }
+console.log('Cuando es 0 == false es: ' + (0 == false));
 
-            if (e.preventDefault) {
-                e.preventDefault();
-            } else {
-                return false;
-            }
-        }
+console.log('cuando es 1 == true es: ' + (1 == true));
 
-        toggle = document.getElementById('toggle');
+console.log('Cuando es "" == 0' + ("" == 0)); // Convierte "" a 0
 
-        if (toggle.addEventListener) {
-            toggle.addEventListener('click', showHide, false);
+console.log('Cuando es 0 == ""' + (0 == "")); // Convierte "" a 0
 
-        } else if (toggle.attachEvent){
-            toggle.attachEvent('onclick', showHide);
-        }
-    })();
-</script>
-</body>
-</html>
+console.log('CUando es "     " == 0' + (0 == "     "));
+
+var x = {};
+
+var y = x;
+
+console.log("La Comparación entre los objetos X y Y es: " + (x == y));
+
+/* igualdad estricta (===) */
+
+console.log('Cuando es "1" === 1 es: ' + ("1" === 1));
+
+console.log('Cuando es "0" === 0 es: ' + ("0" === 0));
+
+
+/* Comparación no estricta de no igual (!=) */
+
+console.log('Cuando es "" != 0' + ("" != 0));
+
+/* Comparación estricta de no igual (!==)*/
+
+
+console.log('Cuando es "" !== 0' + ("" !== 0));
+
+/* Flujos logicos */
+
+console.log("----- flujos logicos -----");
+
+// Operador del tipo and `&&`
+console.log( true && true);
+console.log(true && false);
+console.log(false && false);
+console.log(false && true);
+
+// Operador del tipo or `or`
+console.log( true || true);
+console.log(true || false);
+console.log(false || false);
+console.log(false || true);
