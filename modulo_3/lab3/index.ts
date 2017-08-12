@@ -42,5 +42,5 @@ if(time >= 0000 && time < 1200){
 	console.log("Buenas tardes");
 } else if(time >=1700 && time < 2359){
 	//alert("Buenas noches");
-	console.log("Buenas noches");
+	console.log("Buenas noches"); 
 }
