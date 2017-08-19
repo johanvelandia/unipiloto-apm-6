@@ -1,0 +1,23 @@
+{
+  "name": "laboratorio1",
+  "version": "1.0.0",
+  "description": "labObjetosTypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanvelandia/unipiloto-apm-6.git"
+  },
+  "keywords": [
+    "typeScritp",
+    "objects"
+  ],
+  "author": "johanvelandia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johanvelandia/unipiloto-apm-6/issues"
+  },
+  "homepage": "https://github.com/johanvelandia/unipiloto-apm-6#readme"
+}
