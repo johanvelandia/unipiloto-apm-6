@@ -1,12 +1,15 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../models/product';
+
+import { Person } from '../models/person';
+import { Teacher } from '../models/teacher';
+import { Student } from '../models/student';
 
 @Component({
-  selector: 'product-detail',
-  templateUrl: './detail.component.html'
+  selector: 'teacher-detail',
+  templateUrl: './detail.teacher.component.html'
 })
 
-export class ProductDetailComponent {
+export class TeacherDetailComponent {
   @Input()
-  product: Product;
+  teacher: Teacher;
 }

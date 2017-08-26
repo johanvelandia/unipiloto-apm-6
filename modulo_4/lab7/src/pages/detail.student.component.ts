@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+
+import { Person } from '../models/person';
 import { Student } from '../models/student';
 
 @Component({
