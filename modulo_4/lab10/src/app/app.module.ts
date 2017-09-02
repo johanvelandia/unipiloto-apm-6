@@ -9,13 +9,15 @@ import {ProductsService} from "./service/products.service";
 import { HomeComponent } from './pages/home/home.component';
 import {AppRoutingModule} from "./app.routing";
 import {APP_BASE_HREF} from "@angular/common";
+//import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    //DetailComponent
   ],
   imports: [
     BrowserModule,
