@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Product} from "../../models/product";
+import {Router} from "@angular/router";
+import {ProductsService} from "../../services/products.service";
 
 @Component({
   selector: 'app-products',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  title: string = "los productos del Año";
 
-  ngOnInit() {
+  selected: Product;
+
+  products: Product[];
+
+  constructor(private router: Router, private productsService: ProductsService) {
+
+  }
+
+  getProducts() {
+    this.productsService.getProducts().then(products => this.products = products);
+  }
+
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  onSelect(product: Product){
+    this.selected = product;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['product/detail/', this.selected.id]);
   }
 
 }
