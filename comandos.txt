@@ -1,0 +1,38 @@
+
+- ng new lab2
+- ng g new component nombreComponente
+- ng g new service services/nombreservicio.service
+- npm install firebase angularFire2 --save
+- npm install cordova ionic -g 
+
+- cordova create lab1 com.apll.lab1 lab1
+   identificador del paquete o name space 	nombre de la aplicacion
+
+
+  JDK 8 
+  ANDROID SDK
+  ANDROID STUDIO
+  GENYMOTION -- EMULADOR
+  
+  IDE MAESTRO XCODE -- PARA IOS 
+  hOCKEYaPP -- PARA PUBLICAR APLICACIONES
+  TENER LAS LICENCIAS DE DESARROLLADOR 99 DOLARES ANUALES
+  LOS KEY DE LOS CERTIFICADOS DE PUBLICACION SE DEBEN GENERAR EN LA MISMA MAQUINA DONDE SE VA A REALIZAR LA PUBLICACION (OJO CON ESTO)
+  
+
+PARA ADICIONAR LA PLATAFORMA SOBRE LA CUAL VAMOS A TRABAJAR
+ 
+ se debe ejecutar los siguientes comandos sobre el proyecto (Es decir hacer cd lab1)
+ 
+- cordova platform add android
+- cordova platform add ios
+- cordova platform add browser
+  
+se debe ejecutar el comando para correr la aplicacion
+- cordova build android
+- cordova run android  
+ 
+ 
+Para quitar la plataforma se debe ejecutar 
+- cordova platform rm android
+- cordoba platform remove android
