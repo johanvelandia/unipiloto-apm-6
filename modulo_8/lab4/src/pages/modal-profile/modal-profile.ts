@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, NavParams  } from 'ionic-angular';
 
 @Component({
   selector: 'page-modal-profile',
@@ -7,8 +7,14 @@ import { ViewController } from 'ionic-angular';
 })
 export class ModalProfilePage {
 
-  constructor(public viewCtrl: ViewController) {
-  }
+  public element: string;
+    public name: string;
+
+
+  constructor(public viewCtrl: ViewController, public nav: NavParams) {
+    this.element = nav.get('userId');
+    this.name = nav.get('name');
+  };
 
   /*
   * La clase ViewController tiene varios metodos que tienen interacción

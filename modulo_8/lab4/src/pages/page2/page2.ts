@@ -14,7 +14,7 @@ export class Page2 {
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {}
 
   presentProfileModal() {
-    let profileModal = this.modalCtrl.create(ModalProfilePage, { userId: 8675309 });
+    let profileModal = this.modalCtrl.create(ModalProfilePage, { userId: 8675309, name: 'Alejandro' });
     profileModal.present();
   }
 
