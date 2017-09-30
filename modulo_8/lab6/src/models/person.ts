@@ -10,7 +10,7 @@ export class Person{
 		this.name=name;
 		this.lastname=lastname;
 	}
-	/*
+	
 	getId():number{
 		return this.id;
 	}
@@ -38,5 +38,5 @@ export class Person{
 	getLastname():string{
 		return this.lastname;
 	}
-	*/
+	
 } 

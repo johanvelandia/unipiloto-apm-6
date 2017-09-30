@@ -33,4 +33,10 @@
     </ion-fab-list>-->
   </ion-fab>
 
+<ion-list no-lines>
+  <button ion-item *ngFor="let item of estudiantes" (click)="itemSelected(item)">
+    {{ item.name }}
+  </button> 
+</ion-list>
+
 </ion-content>

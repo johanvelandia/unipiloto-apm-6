@@ -13,7 +13,7 @@ export class Student extends Person{
 			this.grade=grade;
 			this.group=group;
 	}
-	/*
+	
 	setClases(clases:string[]):void{
 		this.clases=clases;
 	}
@@ -37,5 +37,5 @@ export class Student extends Person{
 	getGroup():string{
 		return this.group;
 	}
-	*/
+	
 }

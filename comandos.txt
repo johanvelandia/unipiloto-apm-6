@@ -53,7 +53,7 @@ C:\Program Files\Java\jdk1.8.0_112
 -- ionic info
 -- ionic start
 -- ionic start lab1 blank
-   ionic start lab1 siderehv
+   ionic start lab1 sidemenu
    ionic start lab1 tabs
 
 cd lab1   
@@ -64,7 +64,17 @@ ionic cordova run android
 ionic g page nombrecomponete
 ionic g provider nombreServicio
 
-para isntalar el ionic storage, este esun plugin de cordova
+--para isntalar el ionic storage, este esun plugin de cordova
 ionic cordova plugin add cordova-sqlite-storage 
 npm install --save @ionic/storage
+
+--para instalar el plugin de network 
+$ ionic cordova plugin add cordova-plugin-network-information
+$ npm install --save @ionic-native/network
+
+-- para ver cual devices estan conectados
+adb devices 
+-- para correr el proyecto en un dispositivo que selecionemos cuando tenemos varios dispositivos instalados
+ionic cordova run android -targe=012452785521
+
    
