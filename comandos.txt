@@ -61,6 +61,10 @@ ionic serve --lab
 ionic cordova platform add android
 ionic cordova build android
 ionic cordova run android
+ionic g page nombrecomponete
+ionic g provider nombreServicio
 
-
+para isntalar el ionic storage, este esun plugin de cordova
+ionic cordova plugin add cordova-sqlite-storage 
+npm install --save @ionic/storage
    
