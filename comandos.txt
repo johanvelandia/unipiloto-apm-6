@@ -82,3 +82,18 @@ version de node.js
 node -v version
  --
 npm -version
+
+para adicionar un plugin especifico
+-- cordova plugin add cordova-plugin-statusbar
+
+------------------ plugin camera ---------------------------------
+se sugiere hacer uso del DestinationType.DATA_URL
+
+para revisar los devices en chrome:
+chrome://inspect/#devices
+
+para bajar la base de datos de sqlite-storage
+adb pull /data/data/io.ionic.starter/databases/data.db --> para android 5
+adb pull /data/data/io.ionic.starter/files/data.db --> para android 6 >
+
+

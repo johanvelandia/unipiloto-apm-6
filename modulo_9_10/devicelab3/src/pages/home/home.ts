@@ -10,10 +10,14 @@ import { Device } from '@ionic-native/device';
 export class HomePage {
 
  
-  constructor(public navCtrl: NavController, public device: Device) {
-	
-	this.device.uuid.then(() => console.log('Device UUID is: ' + this.device.uuid))
-	.catch(e => console.log('Error generando uuid', e));  	
+  deviceModel :string;
+  deviceUuid: string;
+
+  constructor(public navCtrl: NavController, private device: Device) {
+	console.log('Device UUID is: ' + this.device.uuid);
+	this.deviceModel=device.model;
+	this.deviceUuid=device.uuid;
+	//this.device.uuid.then(() => console.log('Device UUID is: ' + this.device.uuid)).catch(e => console.log('Error generando uuid', e));  	
   	
   }
 
