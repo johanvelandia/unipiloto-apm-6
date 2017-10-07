@@ -78,3 +78,7 @@ adb devices
 ionic cordova run android -targe=012452785521
 
    
+version de node.js
+node -v version
+ --
+npm -version
