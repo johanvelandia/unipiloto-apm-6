@@ -96,4 +96,12 @@ para bajar la base de datos de sqlite-storage
 adb pull /data/data/io.ionic.starter/databases/data.db --> para android 5
 adb pull /data/data/io.ionic.starter/files/data.db --> para android 6 >
 
+-------------------------------------------------
+
+repositorio del curso
+https://github.com/alejo8591/unipiloto-apm-6
+
+codigo en tiempo real
+https://floobits.com/alejo8591/unipiloto-apm-6
+
 
