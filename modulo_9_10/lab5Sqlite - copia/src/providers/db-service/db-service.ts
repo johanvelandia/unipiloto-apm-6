@@ -30,7 +30,7 @@ export class DbServiceProvider {
     return this.database.executeSql(
       `CREATE TABLE IF NOT EXISTS products (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,tipo TEXT, cantidad NUMERIC, precio NUMERIC, latitud NUMERIC, longitud NUMERIC, imagen TEXT
+        name TEXT
       );`,{})
       .then(result => {
         console.debug(result);
@@ -79,12 +79,10 @@ export class DbServiceProvider {
       .catch(err => console.error(err));
   }
 
-//tipo TEXT, cantidad NUMERIC, precio NUMERIC, latitud NUMERIC, longitud NUMERIC, imagen
-
-  addProduct(name: string, tipo: string, cantidad:number, precio: number, latitud: number, longitud: number) {
+  addProduct(name: string) {
     return this.isReady()
       .then(() => {
-        return this.database.executeSql(`INSERT INTO products(name,tipo,cantidad,precio,latitud,longitud) VALUES ('${name}','${tipo}',${cantidad},${precio},${latitud},${longitud});`, {})
+        return this.database.executeSql(`INSERT INTO products(name) VALUES ('${name}');`, {})
           .then(result => {
             if(result.insertId) return this.getProduct(result.insertId);
           })
@@ -100,10 +98,10 @@ export class DbServiceProvider {
       .catch(err => console.error(err));
   }
 
-  updateProduct(id: number, nombre: string, tipo: string, cantidad:number, precio: number, latitud: number, longitud: number) {
+  updateProduct(id: number, nombre: string) {
     return this.isReady()
       .then(() => {
-        return this.database.executeSql(`UPDATE products SET name='${nombre}' WHERE id = ${id}`, [])
+        return this.database.executeSql(`UPDATE products SET name=${nombre}  WHERE id = ${id}`, [])
       })
       .catch(err => console.error(err));
   }

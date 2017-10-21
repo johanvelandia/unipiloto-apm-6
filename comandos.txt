@@ -105,3 +105,5 @@ codigo en tiempo real
 https://floobits.com/alejo8591/unipiloto-apm-6
 
 
+sudo npm install -g cordova ionic
+

@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="false">
+    <ion-title>Detalle producto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <span>Id: </span><span>{{ product.id }}</span>
+    </ion-item>
+    <ion-item>
+      <span>Nombre: </span><span>{{ product.name }}</span>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="secondary" (click)="modificar(product.id)" >Modificar</button>
+
+<br>
+<br>
+<div *ngIf="verModificar">
+  
+  {{verModificar}}
+
+ <form [formGroup]="myForm1" (ngSubmit)="updateProduct(product.id)">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input formControlName="name" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block type="submit" [disabled]="!myForm1.valid">Guardar</button>
+  </form>
+
+  
+</div>
+
+</ion-content>
